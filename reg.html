@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>My bootstrap web site @ iti</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link href="css/style.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		.reg {
+			position: relative;
+			top: 50px;
+			left: 15%;
+			width: 70%;
+			background-color: black;
+
+			height: 88.4vh;
+			margin: 0;
+			border-radius: 30px
+		}
+
+		.form {
+			float: right;
+			position: relative;
+			top: -50%;
+			left: 10%;
+			color: white;
+		}
+
+		.form-control {
+			border: 0;
+			background-color: black;
+			border-bottom: 1px solid gray;
+			font-size: 18px;
+			width: 115%
+		}
+
+		.btn {
+			width: 35%;
+			border-radius: 30px;
+			margin-top: 30px;
+		}
+
+		.form input {
+			padding: 25px;
+		}
+
+		.alert {
+			width: 115%;
+			margin-top: 15px;
+			display: none;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container reg ">
+		<div class="row ">
+			<div class="col-lg-10 ">
+				<div class="img float-left ">
+					<img src="img/bg-heading-03.jpg" class="col-lg-7 px-0" style="margin-left: -15px;border-bottom-left-radius: 30px;border-top-left-radius: 30px">
+				</div>
+
+				<div class="col-lg-6 form">
+
+					<h3 class="text-center mx-10">registration form</h3>
+
+
+					<form class=" form1">
+						<div class="form-group">
+							<div class="form-group">
+								<input type="email" name="mail" id="mail" placeholder="Email" required class="form-control">
+								<div class="alert alert-warning" id="alert3">
+									<strong>warning!</strong> email should be more in correct form
+									<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="text" name="name" id="uname" placeholder="Name" required class="form-control">
+								<div class="alert alert-warning" id="alert">
+									<strong>warning!</strong> Name should be more than 5 letters
+									<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<input type="password" name="pass" id="pass" placeholder="Password" class="form-control">
+								<div class="alert alert-warning" id="alert2">
+									<strong>warning!</strong> password be more than 5 letters
+									<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<input type="password" name="rePass" id="rePass" placeholder="repear password" class="form-control  ">
+								<div class="alert alert-warning" id="alert4">
+									<strong>warning!</strong> password no matching......
+									<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+								</div>
+							</div>
+							<div class="form-group ">
+							
+
+								<select class="form-control" id="sel1">
+									
+									<option>Gender</option>
+									<option>male</option>
+									<option>female</option>
+								</select>
+							</div>
+
+							<input type="tel" name="phone" id="phone" placeholder="Phone" class="form-control">
+						</div>
+						<div class="p-t-10">
+							<button class="btn btn-success" type="submit">Submit</button>
+						</div>
+
+				</div>
+			</div>
+
+			<script src="js/jquery.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+
+<!-- 		
+				// $(function () {
+
+				// 		$("input").focus(function () {
+				// 			$(this).css({
+				// 				"background-color": "black",
+
+				// 			});
+				// 		})
+				// 		$("#mail").blur(function () {
+				// 			regMail = '^([a-z\.]+)@([a-z\.]+[\.][a-z]{2,3})$';
+				// 			var checkMail = $("#mail").val();
+				// 			if (checkMail.length < 3 && regMail.test(checkMail)) {
+				// 				$("#alert3").show(800);
+				// 				$(this).css("border", "1px solid red");
+				// 			}
+				// 			else {
+
+				// 				$("#alert3").hide(800);
+				// 				$("#uname").focus();
+				// 				$(this).css({ "border": "0", "border-bottom": "1px solid gray" });
+				// 			}
+				// 		})
+				// 		$("#uname").blur(function () {
+				// 			var check = $("#uname").val();
+				// 			if (check.length < 3) {
+				// 				$("#alert").show(800);
+				// 				$(this).css("border", "1px solid red");
+				// 			}
+				// 			else {
+
+				// 				$("#alert").hide(800);
+				// 				$("#pass").focus();
+				// 				$(this).css({ "border": "0", "border-bottom": "1px solid gray" });
+
+				// 			}
+				// 			$("#pass").blur(function () {
+				// 				var comPass = $(this).val();
+				// 				if (comPass.length < 5) {
+				// 					$("#alert2").show(800);
+				// 					$(this).css("border", "1px solid red");
+				// 				}
+				// 				else {
+
+				// 					$("#alert2").hide(800);
+				// 					$("#rePass").focus();
+				// 					$(this).css({ "border": "0", "border-bottom": "1px solid gray" });
+
+				// 				}
+
+				// 			})
+
+				// 		})
+				// 		$("#rePass").blur(function () {
+				// 			var confPass = $("#pass").val();
+				// 			var reaPass = $("#rePass").val();
+
+				// 			if (confPass === reaPass) {
+				// 				$("#alert4").hide(800);
+				// 				$("#phone").focus();
+				// 				$(this).css({ "border": "0", "border-bottom": "1px solid gray" });
+
+				// 			}
+				// 			else {
+				// 				$("#alert4").show(800);
+				// 				$(this).css("border", "1px solid red");
+
+
+				// 			}
+				// 		})
+				// 	})
+			
+			
+			
+			 -->
+		<script src="js/main.js"></script>
+</body>
+
+</html>
